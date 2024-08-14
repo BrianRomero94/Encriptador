@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Contenedor principal -->
+    <div class="contenedor">
+        <!-- Columna izquierda: entrada de texto -->
+        <div class="columna-izquierda">
+            <div class="logo">
+                <!-- Aquí podrías insertar un logo si es necesario -->
+            </div>
+            <label for="entradaTexto">Ingrese el texto aquí</label>
+            <textarea id="entradaTexto" rows="4" cols="50" placeholder="Escribe tu texto aquí..."></textarea>
+            <div class="advertencia">
+                <p>⚠️ Solo letras minúsculas y sin acentos</p>
+            </div>
+            <div class="botones">
+                <button id="btnEncriptar">Encriptar</button>
+                <button id="btnDesencriptar">Desencriptar</button>
+                <button id="btnBorrar">Borrar</button>
+            </div>
+        </div>
+        
+        <!-- Columna derecha: salida de texto y visualización -->
+        <div class="columna-derecha">
+            <div class="contenedor-salida">
+                <div id="mensajePredeterminado">
+                    <strong>Ningún mensaje fue encontrado</strong>
+                    <p>Ingresa el texto que deseas encriptar o desencriptar</p>
+                </div>
+                <img id="imagenEstado" src="imagenes/Neutro.webp" alt="Imagen descriptiva">
+                <textarea id="salidaTexto" rows="4" cols="50" readonly style="display:none;"></textarea>
+                <div id="contenedorCopiar" style="display:none;">
+                    <button id="btnCopiar">Copiar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapié con el nombre y el año de creación -->
+    <footer>
+        <p>Desarrollado por Brian Romero - 2024</p>
+    </footer>
+
+    <!-- Conexión con el archivo JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
